@@ -5,7 +5,7 @@
 
     <div class="container">
 
-        {{ Form::open(['route' => 'login', 'method' => '#', 'class' => 'form-signin']) }}
+        {{ Form::open(['route' => 'auth', 'method' => 'post', 'class' => 'form-signin']) }}
 
         <h3 class="text-center mt-4 form-signin-heading">Please Sign In</h1>
 
