@@ -5,6 +5,7 @@
 
     <div class="container">
 
+<<<<<<< HEAD
         {{-- @if (isset($message))
             <div class="alert alert-success">
 
@@ -21,6 +22,9 @@
         </div>
 
         {{ Form::open(['route' => 'loginDashboard', 'method' => 'POST', 'class' => 'form-signin']) }}
+=======
+        {{ Form::open(['route' => 'auth', 'method' => 'post', 'class' => 'form-signin']) }}
+>>>>>>> 19c0b42274c60e3559b8a6b0152ab3530f273849
 
         <h3 class="text-center mt-4 form-signin-heading">Please Sign In</h1>
 
