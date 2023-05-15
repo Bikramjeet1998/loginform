@@ -19,5 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/login', [UserController::class, 'index'])->name('login');
-Route::get('/create', [UserController::class, 'create']);
+Route::get('/dashboard', [UserController::class, 'dashboard'])->name('dashboard');
+Route::get('/create', [UserController::class, 'createNewUser']);
 Route::post('/create', [UserController::class, 'store'])->name('createuser');
+Route::post('/login', [UserController::class, 'login'])->name('loginDashboard');
