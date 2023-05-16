@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +16,7 @@ use App\Http\Controllers\UserController;
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -22,8 +24,10 @@ Route::get('/login', [UserController::class, 'index'])->name('login');
 Route::get('/dashboard', [UserController::class, 'dashboard'])->name('dashboard');
 Route::get('/create', [UserController::class, 'createNewUser']);
 Route::post('/create', [UserController::class, 'store'])->name('createuser');
-<<<<<<< HEAD
 Route::post('/login', [UserController::class, 'login'])->name('loginDashboard');
-=======
-route::post('/login', [UserController::class, 'login'])->name('auth');
->>>>>>> 19c0b42274c60e3559b8a6b0152ab3530f273849
+
+Route::get('/adminlogin', [AdminController::class, 'index'])->name('adminlogin');
+Route::post('/adminlogin', [AdminController::class, 'login'])->name('adminlogin');
+Route::get('/admindashboard', [AdminController::class, 'dashboard'])->name('admindashboard');
+// Route::get('/createAdmin', [AdminController::class, 'createNewAdmin']);
+// Route::post('/createAdmin', [AdminController::class, 'store'])->name('createadmin');
